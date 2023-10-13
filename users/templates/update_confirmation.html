@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>The user {{ user_name }} was updated successfully</h1>
+    <h2>yout current information:</h2>
+    <ul>
+        <li>first name: {{user.first_name}}</li>
+        <li>last name: {{user.last_name}}</li>
+        <li>email: {{user.email}}</li>
+    </ul>
+
+    <a href="{% url 'index' %}" class="">go home</a>
+{% endblock content%}

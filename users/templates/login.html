@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>Hello, Please Log In </h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.username.label_tag }} {{ form.username }}
+        {{ form.password.label_tag }} {{ form.password }}
+        <button type="submit">log in</button>
+    </form>
+    <h1>If you are not registered, register: <a href="{% url 'register' %}" class="btn btn-primary">sing in</a></h1>
+    
+
+{% endblock content%}

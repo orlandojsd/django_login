@@ -1,0 +1,6 @@
+<form method="post" style="display: inline;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Actualizar</button>
+</form>
+<a href="{% url 'index' %}" class="">go home</a>
